@@ -4,10 +4,8 @@ import android.app.*
 import android.app.PendingIntent.FLAG_IMMUTABLE
 import android.content.Intent
 import android.media.MediaPlayer
-import android.os.Build
 import android.os.IBinder
-import androidx.annotation.RequiresApi
-import com.barmge.sampalemusicplayer.MainActivity
+import com.barmge.sampalemusicplayer.activity.MainActivity
 import com.barmge.sampalemusicplayer.R
 import com.barmge.sampalemusicplayer.utils.Constants.Channel_Id
 import com.barmge.sampalemusicplayer.utils.Constants.Music_Notification_id
