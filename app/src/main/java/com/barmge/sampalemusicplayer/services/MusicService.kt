@@ -22,7 +22,7 @@ class MusicService : Service() {
         super.onCreate()
         initMusic()
         createNotificationChannel()
-        startForeground(1, showNotification())
+        startForeground(Music_Notification_id, showNotification())
     }
 
 
