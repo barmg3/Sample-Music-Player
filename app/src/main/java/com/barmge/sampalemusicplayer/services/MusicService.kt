@@ -22,6 +22,7 @@ class MusicService : Service() {
         super.onCreate()
         initMusic()
         createNotificationChannel()
+        startForeground(1, showNotification())
     }
 
 
@@ -54,7 +55,7 @@ class MusicService : Service() {
     }
 
 
-    private fun showNotification(){
+    private fun showNotification() : Notification {
 
         val notificationIntent = Intent(this , MainActivity::class.java)
 
@@ -67,7 +68,7 @@ class MusicService : Service() {
             .setContentIntent(pendingIntent)
             .build()
 
-        startForeground(Music_Notification_id , notification)
+        return notification
     }
 
     private fun initMusic(){

@@ -3,6 +3,7 @@ package com.barmge.sampalemusicplayer.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.barmge.sampalemusicplayer.databinding.ActivityMainBinding
 import com.barmge.sampalemusicplayer.services.MusicService
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.startButton.setOnClickListener {
            Intent(this , MusicService::class.java).also {
-               startService(it)
+               ContextCompat.startForegroundService(baseContext, it)
                binding.statusTextView.text = "Music Started"
            }
         }
